@@ -258,7 +258,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 668dbc99dbc251c4ba305c9a0a9d759e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  names:
+  - Tom
+  - Vanderbilt
+  - Bethedsa
+  - Jimothy
+  colors:
+  - {r: 1, g: 0.21383637, b: 0.28524426, a: 0}
+  - {r: 0.5318942, g: 1, b: 0.21568626, a: 0}
+  - {r: 0.21568626, g: 1, b: 0.81414026, a: 0}
+  - {r: 0.4687499, g: 0.21568626, b: 1, a: 0}
+  - {r: 1, g: 0.6508373, b: 0.21568626, a: 0}
+  debug: 1
   prefabCube: {fileID: 8942180421845591983, guid: aaa7182b9c3615648ae16b3ae4e58f8b, type: 3}
+  totalCubes: 105
+  spawnCubeInterval: 0.1
+  spawnPositionRange: 10
 --- !u!4 &336537971
 Transform:
   m_ObjectHideFlags: 0
@@ -408,7 +423,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 0.01
+  m_Intensity: 0.1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
