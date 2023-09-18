@@ -83,7 +83,7 @@ public class SpawnCubes : MonoBehaviour
         }
         
         if(Input.GetKeyDown(KeyCode.B)) {
-            CollectCubes();
+            StartCoroutine(CollectCubes());
         }
     }
 
@@ -99,7 +99,8 @@ public class SpawnCubes : MonoBehaviour
         // can you change (in the inspector) the size of the random location?
 
         // changing the name to a random name
-        cube.name = names[Random.Range(0,names.Length)];
+        int index = Random.Range(0,names.Length);
+        cube.name = names[index];
         
 
         Vector3 newPos = new Vector3(
@@ -117,7 +118,12 @@ public class SpawnCubes : MonoBehaviour
         // can you change the color of each cube?
         Color newColor = Random.ColorHSV();
         if(debug) Debug.Log("setting color to " + newColor);
-        cube.GetComponent<Renderer>().material.color = newColor;
+        // the old way
+        // cube.GetComponent<Renderer>().material.color = newColor;
+
+        // the new way, use the colors from our array of colors.
+        // names[1] always gets colors[1].
+        cube.GetComponent<Renderer>().material.color = colors[index];
 
         // can you add physics to the cubes? Either in code, or in the prefab?
         if(debug) Debug.Log("adding Rigidbody component.");
@@ -130,7 +136,7 @@ public class SpawnCubes : MonoBehaviour
 
 
     // this function and it's loop all happen on one frame.
-    void CollectCubes() {
+    IEnumerator CollectCubes() {
         // find all cubes in scene // add them to an array and add them to an array
         GameObject[] cubes = GameObject.FindGameObjectsWithTag("Cube");
         // move all of the to the same location (0,2,0)
@@ -138,6 +144,7 @@ public class SpawnCubes : MonoBehaviour
         while(i < cubes.Length) {
             cubes[i].transform.position = new Vector3(0,2,0);
             i += 1;
+            yield return new WaitForEndOfFrame();
         }
     }
 
