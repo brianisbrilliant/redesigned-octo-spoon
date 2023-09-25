@@ -127,7 +127,7 @@ public class SpawnCubes : MonoBehaviour
 
         // can you add physics to the cubes? Either in code, or in the prefab?
         if(debug) Debug.Log("adding Rigidbody component.");
-        cube.AddComponent(typeof(Rigidbody));
+        // cube.AddComponent(typeof(Rigidbody));
 
 
         if(debug) Debug.Log("<color=red>End of SpawnCube() function.</color>");
