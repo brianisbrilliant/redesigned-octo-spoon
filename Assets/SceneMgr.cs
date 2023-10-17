@@ -14,6 +14,10 @@ public class SceneMgr : MonoBehaviour
         SceneManager.LoadScene(buildIndex);
     }
 
+    public void RestartScene() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     public void QuitGame() {
         Debug.Log("Quitting Game...");
         Application.Quit();
