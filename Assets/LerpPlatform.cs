@@ -15,7 +15,7 @@ public class LerpPlatform : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        platformBase = this.transform.GetChild(0);
+        platformBase = this.transform.GetChild(0);  // assign platform base
         start = this.transform.GetChild(1);         // assign start
         end = this.transform.GetChild(2);           // assign end
 
@@ -25,7 +25,7 @@ public class LerpPlatform : MonoBehaviour
             lr.SetPosition(1, end.position);
         }
 
-        StartCoroutine(Move());
+        StartCoroutine(Move());         // start the move coroutine.
     }
 
     // Update is called once per frame
