@@ -14,13 +14,14 @@ public class WreckingBall : MonoBehaviour
     [SerializeField]
     private AnimationCurve curve;
 
-
+    private Collider collider;
     private Rigidbody rb;
     private Transform ballStart;
     private bool readyToLaunch = true;
 
     void Start()
     {
+        collider = this.GetComponent<Collider>();
         rb = this.GetComponent<Rigidbody>();
         rb.isKinematic = true;
         ballStart = GameObject.Find("BallStart").transform;
@@ -44,6 +45,7 @@ public class WreckingBall : MonoBehaviour
         readyToLaunch = false;
         StartCoroutine(Return());
         rb.isKinematic = false;
+        collider.isTrigger = false;
         rb.AddForce( ballStart.forward * launchForce, ForceMode.Impulse);
     }
 
@@ -71,6 +73,7 @@ public class WreckingBall : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
+        collider.isTrigger = true;
         readyToLaunch = true;
     }
 }
