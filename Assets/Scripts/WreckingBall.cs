@@ -16,6 +16,8 @@ public class WreckingBall : MonoBehaviour
     [SerializeField]
     private AudioClip launchAudioClip; // Public AudioClip field
 
+
+    private Collider collider;
     private AudioSource launchAudioSource; // Reference to the AudioSource component
     private Rigidbody rb;
     private Transform ballStart;
@@ -23,6 +25,7 @@ public class WreckingBall : MonoBehaviour
 
     void Start()
     {
+        collider = this.GetComponent<Collider>();
         rb = this.GetComponent<Rigidbody>();
         rb.isKinematic = true;
         ballStart = GameObject.Find("BallStart").transform;
@@ -60,7 +63,10 @@ public class WreckingBall : MonoBehaviour
 
         StartCoroutine(Return());
         rb.isKinematic = false;
+
+        collider.isTrigger = false;
         rb.AddForce(ballStart.forward * launchForce, ForceMode.Impulse);
+
     }
 
     private IEnumerator Return()
@@ -79,6 +85,7 @@ public class WreckingBall : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
+        collider.isTrigger = true;
         readyToLaunch = true;
     }
 }
