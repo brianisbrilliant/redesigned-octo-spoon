@@ -20,7 +20,8 @@ public class LerpPlatform : MonoBehaviour
         end = this.transform.GetChild(2);           // assign end
 
         lr = this.gameObject.GetComponent<LineRenderer>();      // assign lr
-        if(lr) {                                                // if lr exists, assign the positions.
+        if (lr)
+        {                                                // if lr exists, assign the positions.
             lr.SetPosition(0, start.position);
             lr.SetPosition(1, end.position);
         }
@@ -32,16 +33,19 @@ public class LerpPlatform : MonoBehaviour
     void Update()
     {
         // every frame that we move, we change the beam's end location to be the bottom of the platform.
-        if(updateBeam) {
+        if (updateBeam)
+        {
             lr.SetPosition(1, platformBase.position);
         }
     }
 
-    IEnumerator Move() {
+    IEnumerator Move()
+    {
         float counter = 0;
 
         // move from start to end
-        while(counter < intervalInSeconds) {
+        while (counter < intervalInSeconds)
+        {
             counter += Time.deltaTime / intervalInSeconds;
             platformBase.position = Vector3.Lerp(start.position, end.position, curve.Evaluate(counter));
             yield return new WaitForEndOfFrame();
@@ -51,14 +55,16 @@ public class LerpPlatform : MonoBehaviour
         yield return new WaitForSeconds(2);
 
         // move from end to start.
-        while(counter > 0) {
+        while (counter > 0)
+        {
             counter -= Time.deltaTime / intervalInSeconds;
             platformBase.position = Vector3.Lerp(start.position, end.position, curve.Evaluate(counter));
             yield return new WaitForEndOfFrame();
         }
 
         // if you want to loop, loop again.
-        if(looping) {
+        if (looping)
+        {
             StartCoroutine(Move());
         }
     }
