@@ -381,6 +381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 336537971}
   - component: {fileID: 336537970}
+  - component: {fileID: 336537972}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -432,6 +433,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &336537972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336537969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a73975489a9d3a64f930dc0a7a7b4fc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newObjects:
+  - {fileID: 8182083990858372030, guid: 07c8d5245c4405c42a59b8d0c9c48f16, type: 3}
+  - {fileID: 1165149744721010952, guid: cdfd35c733ee4d342a955b44a88ea069, type: 3}
+  - {fileID: 1605299826729514544, guid: ce57325da61f1c74095ab7fb5c3a92f3, type: 3}
 --- !u!1001 &343623391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -977,6 +994,6 @@ SceneRoots:
   - {fileID: 695193398}
   - {fileID: 1674335159}
   - {fileID: 336537971}
+  - {fileID: 344115920}
   - {fileID: 343623391}
   - {fileID: 323227791}
-  - {fileID: 344115920}
