@@ -73,4 +73,12 @@ public class WreckingBall : MonoBehaviour
 
         readyToLaunch = true;
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Cube")) {
+            other.GetComponent<CubeController>().GetCollected();
+            Debug.Log("We have collected cubes.");
+        }
+    }
 }
