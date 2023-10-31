@@ -25,7 +25,7 @@ public class Elevator : MonoBehaviour
     }
 
     void Update() {
-        if(Input.GetKeyDown(KeyCode.Space) && !looping) {
+        if(Input.GetKeyDown(KeyCode.R) && !looping) {
             StartCoroutine(Move());
         }
     }
