@@ -486,8 +486,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384740, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: bobAmount.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459864850019384740, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: enableHeadBob
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384750, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_Name
@@ -1350,7 +1354,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7938014797104823117, guid: afaf2ff06b167cc4583eb7d938a9b631, type: 3}
       propertyPath: m_Name
-      value: Matthew Booth
+      value: MShults Booth
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1880,7 +1884,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3499029486616889946, guid: a0398f15d1c319c49840425136f1b7ce, type: 3}
       propertyPath: m_Name
-      value: Mathew Booth
+      value: MSantos Booth
       objectReference: {fileID: 0}
     - target: {fileID: 7187571377235500874, guid: a0398f15d1c319c49840425136f1b7ce, type: 3}
       propertyPath: m_LocalPosition.x
