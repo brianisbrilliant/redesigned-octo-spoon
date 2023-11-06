@@ -1,11 +1,7 @@
 # redesigned-octo-spoon
 A Unity project.
 
+Edits By RIley Seufert
 
-Additions Made by Lane Forgie 10/27/2023.
-Additions made, currently all the wrecking ball does is push around the cubes it comes in contact with but does not destroy them. So I altered the Wrecking ball script to add a OnTriggerEnter that activates the GetCollected Method when it comes in contact with the wrecking ball after it has been shot. 
-Additions added by Heather Boyce on 10/25/23
-Additions by Devin Brannon October 28th 2023.
-Additions By Logan Wiley Oct 27, 2023.
-
-
+Fixing the 5 "Prefab Staeg Utility" errors
+Moved script into Editor folder to remove 4 of the 5 errors
