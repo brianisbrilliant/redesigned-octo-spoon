@@ -2235,6 +2235,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5523110645377074315, guid: e4294832ba6fd8a428a69df29d957fea, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 6087250198645162498, guid: e4294832ba6fd8a428a69df29d957fea, type: 3}
       propertyPath: m_Name
       value: MShultsItem
