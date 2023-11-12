@@ -1283,6 +1283,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 425634996}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &1842417200 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7481781809821084615, guid: a34c93be9a353d74dabbff1d078a4609, type: 3}
+  m_PrefabInstance: {fileID: 4494707440485133627}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2107164065
 GameObject:
   m_ObjectHideFlags: 0
@@ -2309,6 +2314,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3192333261937016866, guid: fcce03240ba67f9499ed73eed17851a7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3192333261937016866, guid: fcce03240ba67f9499ed73eed17851a7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3192333261937016866, guid: fcce03240ba67f9499ed73eed17851a7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3192333261937016866, guid: fcce03240ba67f9499ed73eed17851a7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3192333261937016866, guid: fcce03240ba67f9499ed73eed17851a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3192333261937016866, guid: fcce03240ba67f9499ed73eed17851a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4084792538081128992, guid: fcce03240ba67f9499ed73eed17851a7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.546
@@ -2349,9 +2378,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5364202192497570083, guid: fcce03240ba67f9499ed73eed17851a7, type: 3}
+      propertyPath: markerPrefab
+      value: 
+      objectReference: {fileID: 1842417200}
     - target: {fileID: 5707955804279385611, guid: fcce03240ba67f9499ed73eed17851a7, type: 3}
       propertyPath: m_Name
       value: JarvisItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 5848421666291433587, guid: fcce03240ba67f9499ed73eed17851a7, type: 3}
+      propertyPath: m_Size.z
+      value: 1.600134
+      objectReference: {fileID: 0}
+    - target: {fileID: 5848421666291433587, guid: fcce03240ba67f9499ed73eed17851a7, type: 3}
+      propertyPath: m_Center.x
+      value: 0.000000047629463
+      objectReference: {fileID: 0}
+    - target: {fileID: 5848421666291433587, guid: fcce03240ba67f9499ed73eed17851a7, type: 3}
+      propertyPath: m_Center.z
+      value: 0.1856694
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
