@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: cdbb40e11399e4a17882ada20a1b896a, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.38515937, g: 0.4724939, b: 0.61858577, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -184,7 +184,11 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+<<<<<<< HEAD
+  - {fileID: 2100000, guid: 1ce962af9cac116458598b94fee61f28, type: 2}
+=======
   - {fileID: 2100000, guid: aabc27f8510a2c6429454d2a8e3164df, type: 2}
+>>>>>>> 7fd7c30f7690a4a5bf32d0cccc0a0b3a6509a3bc
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -447,7 +451,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7280ba1d61a00a540849d5f7a95e4fee, type: 2}
+  - {fileID: 2100000, guid: ef160ddf105ecb448b31678c8dee353c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -611,7 +615,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7280ba1d61a00a540849d5f7a95e4fee, type: 2}
+  - {fileID: 2100000, guid: 9bc51b4e38371b241b09904267cb9814, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1294,7 +1298,7 @@ PrefabInstance:
     - target: {fileID: 5590363875014709721, guid: ec7ddf9a7c17c894a86a6fd88486763f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c5f2f21e1e8d69e418aa352632e20729, type: 2}
+      objectReference: {fileID: 2100000, guid: 31d8ac71948d0544ab4b93f5623d322f, type: 2}
     - target: {fileID: 6517081350437911479, guid: ec7ddf9a7c17c894a86a6fd88486763f, type: 3}
       propertyPath: m_Name
       value: Pivot (1)
@@ -1467,7 +1471,7 @@ PrefabInstance:
     - target: {fileID: 5590363875014709721, guid: ec7ddf9a7c17c894a86a6fd88486763f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c5f2f21e1e8d69e418aa352632e20729, type: 2}
+      objectReference: {fileID: 2100000, guid: db1bb2626a17f5c419a2b7427c4283c1, type: 2}
     - target: {fileID: 6517081350437911479, guid: ec7ddf9a7c17c894a86a6fd88486763f, type: 3}
       propertyPath: m_Name
       value: Pivot
