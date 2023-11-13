@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 4459864850019384741}
   - component: {fileID: 4459864850019384740}
   - component: {fileID: 7108072124974362636}
-  - component: {fileID: 6581598486135269993}
+  - component: {fileID: 8009268037810744990}
   m_Layer: 0
   m_Name: FirstPersonController
   m_TagString: Player
@@ -353,7 +353,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1.1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6581598486135269993
+--- !u!114 &8009268037810744990
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
