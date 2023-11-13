@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lightsaber : MonoBehaviour
+public class Lightsaber : MonoBehaviour, IItem
 {
     private Rigidbody rb;
     private Light light;

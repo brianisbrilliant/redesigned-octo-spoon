@@ -11,6 +11,7 @@ public class Flashlight1 : MonoBehaviour, IItem
     private Rigidbody rb;
     private Light light;
     private bool bright = false;
+    private Collider flashlightCollider;
 
     void Start() {
         rb = this.GetComponent<Rigidbody>();
@@ -18,6 +19,7 @@ public class Flashlight1 : MonoBehaviour, IItem
         if(light != null) {
             light.enabled = false;
         }
+        flashlightCollider = this.GetComponent<Collider>();
     }
 
 
@@ -30,6 +32,7 @@ public class Flashlight1 : MonoBehaviour, IItem
         this.transform.localPosition = Vector3.zero;
         this.transform.localRotation = Quaternion.identity;
         // turn off collision so it doesn't push the player off the map
+        flashlightCollider.enabled = false;
     }
 
     public void Drop() {
@@ -40,6 +43,7 @@ public class Flashlight1 : MonoBehaviour, IItem
         rb.AddRelativeForce(Vector3.forward * 10, ForceMode.Impulse);
         // set this parent to null
         this.transform.SetParent(null);
+        flashlightCollider.enabled = true;
         
     }
 
