@@ -547,11 +547,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2714219014359553971}
   serializedVersion: 4
-<<<<<<< HEAD
-  m_Mass: 1
-=======
   m_Mass: 10
->>>>>>> 7fd7c30f7690a4a5bf32d0cccc0a0b3a6509a3bc
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -583,13 +579,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   returnDelay: 1
-<<<<<<< HEAD
-  launchForce: 90
-  returnintervalInSeconds: 1
-=======
   launchForce: 250
   returnintervalInSeconds: 2
->>>>>>> 7fd7c30f7690a4a5bf32d0cccc0a0b3a6509a3bc
   curve:
     serializedVersion: 2
     m_Curve:
