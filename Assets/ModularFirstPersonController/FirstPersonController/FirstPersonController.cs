@@ -8,9 +8,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
+
 
 #if UNITY_EDITOR
-    using UnityEditor;
+using UnityEditor;
     using System.Net;
 #endif
 
@@ -97,6 +99,8 @@ public class FirstPersonController : MonoBehaviour
     public bool enableJump = true;
     public KeyCode jumpKey = KeyCode.Space;
     public float jumpPower = 5f;
+
+    public event Action OnGroundedCallback;
 
     // Internal Variables
     private bool isGrounded = false;
@@ -450,8 +454,11 @@ public class FirstPersonController : MonoBehaviour
 
         if (Physics.Raycast(origin, direction, out RaycastHit hit, distance))
         {
+            // If we already are grounded return, so we don't call the OnGroundedCallback again.
+            if(isGrounded == true) return; 
             Debug.DrawRay(origin, direction * distance, Color.red);
             isGrounded = true;
+            OnGroundedCallback?.Invoke();
         }
         else
         {
