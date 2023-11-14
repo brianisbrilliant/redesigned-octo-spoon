@@ -539,7 +539,6 @@ Transform:
   - {fileID: 9162863711579933811}
   - {fileID: 3566158314308606904}
   - {fileID: 1617630679821230834}
-  - {fileID: 3243689121864125123}
   - {fileID: 2556436555530522097}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -603,11 +602,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09789555af924814c980c3576726d263, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showParticles: 1
+  particleLiveTime: 1
   upwardForceAmount: 15
   downwardForceAmount: 25
-  rocketParticlePrefab: {fileID: 9792064933433506, guid: 81546c096b3cf134ca0c3b1d890de2a6, type: 3}
-  leftRocketSpawn: {fileID: 3243689121864125123}
-  rightRocketSpawn: {fileID: 2556436555530522097}
+  rocketParticlePrefab: {fileID: -7618818650537092149, guid: 81546c096b3cf134ca0c3b1d890de2a6, type: 3}
+  rocketParticleSpawn: {fileID: 2556436555530522097}
 --- !u!1 &4660122265875073817
 GameObject:
   m_ObjectHideFlags: 0
@@ -867,7 +867,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2556436555530522097}
   m_Layer: 0
-  m_Name: RightRocketSpawn
+  m_Name: RocketSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -882,38 +882,7 @@ Transform:
   m_GameObject: {fileID: 8033467063385679895}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.238, y: -0.5, z: -1.139}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8630702646245760367}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8197334851104139664
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3243689121864125123}
-  m_Layer: 0
-  m_Name: LeftRocketSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3243689121864125123
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8197334851104139664}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.328, y: -0.5, z: -1.139}
+  m_LocalPosition: {x: -0.729, y: -0.87, z: -1.245}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

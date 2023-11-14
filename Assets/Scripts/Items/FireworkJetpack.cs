@@ -1,6 +1,7 @@
 // Caleb Richardson Interactive Scripting, Fall Semester 2023
 
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
 /// A Firework Jetpack that allows for more vertical movement, and attack options.
@@ -9,24 +10,29 @@ public class FireworkJetpack : MonoBehaviour, IItem
 {
     [Header("Options")]
     [SerializeField] private bool showParticles = true;
+    [SerializeField] private float particleLiveTime = 3f;
 
     [Header("Movement Variables")]
     [SerializeField, Range(1, 100)] private float upwardForceAmount;
     [SerializeField, Range(1, 100)] private float downwardForceAmount;
 
     [Header("Particle System References")]
-    [SerializeField] private ParticleSystem rocketParticlePrefab;
-    [SerializeField] private Transform leftRocketSpawn;
-    [SerializeField] private Transform rightRocketSpawn;
+    [SerializeField] private ParticleObject rocketParticlePrefab;
+    [SerializeField] private Transform rocketParticleSpawn;
 
     private Rigidbody Rb => GetComponent<Rigidbody>();
     private Collider JetPackCollider => GetComponent<Collider>();
+    private Vector3 RocketSpawnPos => rocketParticleSpawn.position;
+    private Quaternion RocketSpawnRotation => rocketParticlePrefab.transform.localRotation;
 
     private Rigidbody playerRb;
     private FirstPersonController playerController;
 
+    // Object pooling to save performance
+    private Queue<ParticleObject> particleObjectPool = new Queue<ParticleObject>();
+
     // Used to avoid creating to much garbage for the GC.
-    private WaitForSeconds rocketWaitTimer = new WaitForSeconds(1.5f);
+    private WaitForSeconds rocketWaitTimer = new WaitForSeconds(0.75f);
 
     private bool hasLauched = false;
     private bool isFloating = false;
@@ -117,10 +123,19 @@ public class FireworkJetpack : MonoBehaviour, IItem
     }
 
     private void FireParticles(){
-        // Prefab has ParticleKill to destory the particles after playing.
-
-        Instantiate(rocketParticlePrefab, leftRocketSpawn.position, rocketParticlePrefab.transform.localRotation);
-        Instantiate(rocketParticlePrefab, rightRocketSpawn.position,  rocketParticlePrefab.transform.localRotation);
+        ParticleObject particleObj;
+        // Check if there is particles in the pool
+        if(particleObjectPool.Count > 0){
+            // Reuse a particle from the object pool
+            particleObj = particleObjectPool.Dequeue();
+            particleObj.gameObject.SetActive(true);
+            particleObj.transform.SetPositionAndRotation(RocketSpawnPos, RocketSpawnRotation);
+            particleObj.PlayParticle();
+            return;
+        }
+        // If no particle in the pool then create a new one.
+        var spawnedParticle = Instantiate(rocketParticlePrefab, RocketSpawnPos, RocketSpawnRotation);
+        spawnedParticle.SetupParticleObj(particleObjectPool, particleLiveTime);
     }
 
     // Async and await might be better here.
