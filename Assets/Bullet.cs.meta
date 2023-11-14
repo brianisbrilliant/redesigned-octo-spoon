@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scripts/RileySword.cs.meta
+guid: 32a57bc6b9a80c640bb35bb907d60be6
+========
+guid: 2fecd24d708b1c1469fcf656abdc1ca5
+>>>>>>>> f2702d86d4acf56745b779f5198f0a0e588e6de2:Assets/Bullet.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
