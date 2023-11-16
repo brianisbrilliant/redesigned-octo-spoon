@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Cube
   - Item
+  - ShultsCube
   layers:
   - Default
   - TransparentFX
