@@ -962,6 +962,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2778792183609452847}
+  - component: {fileID: 2701870474097651596}
   m_Layer: 0
   m_Name: Boom Box
   m_TagString: Untagged
@@ -985,6 +986,19 @@ Transform:
   - {fileID: 7733226489829903106}
   m_Father: {fileID: 3404633513786522203}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2701870474097651596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5321139791380592102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed744adcd008914bbcee74ca6ee264c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: -8537985032670844522, guid: 93805bca588b13048981a01b6c517859, type: 3}
 --- !u!1 &6074526341043397796
 GameObject:
   m_ObjectHideFlags: 0
@@ -1487,8 +1501,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.41, y: 0.4, z: 0.67}
-  m_Center: {x: 0, y: 0, z: 0.165}
+  m_Size: {x: 0.011822594, y: 0.21333098, z: 0}
+  m_Center: {x: -0.1990852, y: -0.093334466, z: 0.27624395}
 --- !u!1 &9163338687773547425
 GameObject:
   m_ObjectHideFlags: 0
