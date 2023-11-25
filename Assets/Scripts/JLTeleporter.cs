@@ -16,12 +16,16 @@ public class JLTeleporter : MonoBehaviour, IItem
     private Camera mainCamera; //added reference to camera for raycast
     private float teleportHeightOffset = 1.0f; //added a height offset because I was falling through the floor on teleport
 
+    private Animator animator; //added for animation assignment
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         teleportDestination = transform.position;
         mainCamera = Camera.main; //gets camera for raycast behavior
+
+        animator = GetComponentInChildren<Animator>(); //added for animation assignment
     }
 
     public void Pickup(Transform hand)
@@ -55,6 +59,8 @@ public class JLTeleporter : MonoBehaviour, IItem
         Vector3 adjustedDestination = new Vector3 (teleportDestination.x, teleportDestination.y + teleportHeightOffset, teleportDestination.z);
         
         playerTransform.position = adjustedDestination; //changed teleportDestination to adjustedDestination
+
+        animator.SetTrigger("Teleport"); //added for animation assignment
     }
 
     public void SecondaryAction()
@@ -65,6 +71,8 @@ public class JLTeleporter : MonoBehaviour, IItem
         {
             SetTeleportDestination(hit.point);
         }
+
+        animator.SetTrigger("SetMarker"); //added for animation assignment
     }
 
     //polish
