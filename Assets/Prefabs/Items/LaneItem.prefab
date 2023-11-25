@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2115796346859592478}
   - component: {fileID: 4549777796370791789}
   - component: {fileID: 3373981999745494949}
+  - component: {fileID: 2538231308486445927}
   m_Layer: 0
   m_Name: LaneItem
   m_TagString: Item
@@ -103,8 +104,8 @@ MonoBehaviour:
   aud1: {fileID: 3373981999745494949}
   bulletFSpawnPoint: {fileID: 4419008687796969363}
   bulletBSpawnPoint: {fileID: 3263747737944824054}
-  ProjectilePrefab: {fileID: 4176432728490179848, guid: b5205efb512a45f44be2128b520df13d, type: 3}
-  Projectile1Prefab: {fileID: 4176432728490179848, guid: 261b766b646ef7c4589f931b0abeb83e, type: 3}
+  projectilePrefab: {fileID: 4176432728490179848, guid: b5205efb512a45f44be2128b520df13d, type: 3}
+  projectile1Prefab: {fileID: 4176432728490179848, guid: 261b766b646ef7c4589f931b0abeb83e, type: 3}
   bulletSpeed: 30
 --- !u!82 &4549777796370791789
 AudioSource:
@@ -298,6 +299,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2538231308486445927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5842337703622484031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f39b257936b3624abeaea39450b8a69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pools: []
 --- !u!1001 &2237363964627316079
 PrefabInstance:
   m_ObjectHideFlags: 0

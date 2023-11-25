@@ -12,8 +12,8 @@ public AudioSource aud1;
      public Transform bulletFSpawnPoint;
      public Transform bulletBSpawnPoint;
 
-     public GameObject ProjectilePrefab;
-     public GameObject Projectile1Prefab;
+    public GameObject projectilePrefab;
+    public GameObject projectile1Prefab;
 
      public float bulletSpeed = 10; 
 
@@ -46,17 +46,23 @@ public AudioSource aud1;
         this.transform.SetParent(null);
         
     }
-
-    
-    public void PrimaryAction() {
-var projectile = Instantiate(ProjectilePrefab, bulletFSpawnPoint.position, bulletFSpawnPoint.rotation);
-projectile.GetComponent<Rigidbody>().velocity = bulletFSpawnPoint.forward * bulletSpeed;
- aud.PlayOneShot(audioClip);
+    public void PrimaryAction()
+    {
+        // Use object pooling for the projectile
+        GameObject projectile = LanesObjectPooler.Instance.PullFromPool(projectilePrefab);
+        projectile.transform.position = bulletFSpawnPoint.position;
+        projectile.transform.rotation = bulletFSpawnPoint.rotation;
+        projectile.GetComponent<Rigidbody>().velocity = bulletFSpawnPoint.forward * bulletSpeed;
+        aud.PlayOneShot(audioClip);
     }
 
-    public void SecondaryAction() {
-        var projectile1 = Instantiate(Projectile1Prefab, bulletBSpawnPoint.position, bulletBSpawnPoint.rotation);
-        projectile1.GetComponent<Rigidbody>().velocity = bulletBSpawnPoint.forward * bulletSpeed;
-     aud1.PlayOneShot(audioClip1);
+    public void SecondaryAction()
+    {
+        // Use object pooling for the projectile
+        GameObject projectile = LanesObjectPooler.Instance.PullFromPool(projectile1Prefab);
+        projectile.transform.position = bulletBSpawnPoint.position;
+        projectile.transform.rotation = bulletBSpawnPoint.rotation;
+        projectile.GetComponent<Rigidbody>().velocity = bulletBSpawnPoint.forward * bulletSpeed;
+        aud1.PlayOneShot(audioClip1);
     }
 }
