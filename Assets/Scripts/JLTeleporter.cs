@@ -12,7 +12,6 @@ public class JLTeleporter : MonoBehaviour, IItem
     private Transform playerTransform;
     private Vector3 teleportDestination;
     private GameObject teleportMarker;
-    public GameObject markerPrefab;
     private bool isMarkerSet = false; //Needed to add this to stop the prefab from spawning on Start
     private Camera mainCamera; //added reference to camera for raycast
     private float teleportHeightOffset = 1.0f; //added a height offset because I was falling through the floor on teleport
@@ -75,8 +74,17 @@ public class JLTeleporter : MonoBehaviour, IItem
 
         if (!isMarkerSet)
         {
-            teleportMarker = Instantiate(markerPrefab, newDestination, Quaternion.identity);
-            isMarkerSet = true;
+            //Changed logic to find the prefab instead of drag and drop
+            GameObject jarvisBooth = GameObject.Find("Jarvis Booth");
+            if (jarvisBooth != null)
+            {
+                teleportMarker = Instantiate(jarvisBooth, newDestination, Quaternion.identity);
+                isMarkerSet = true;
+            }
+            else
+            {
+                Debug.LogError("Jarvis Booth object not found in the scene.");
+            }
         }
         else if (teleportMarker != null)
         {
