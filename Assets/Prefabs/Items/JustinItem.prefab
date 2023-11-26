@@ -116,7 +116,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.32
+      scalar: 7
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -287,7 +287,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 1.1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -604,7 +604,7 @@ ParticleSystem:
         m_RotationOrder: 4
     randomizeRotationDirection: 0
     gravitySource: 0
-    maxNumParticles: 1000
+    maxNumParticles: 10000
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -870,7 +870,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 174.25
+      scalar: 500
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4839,6 +4839,7 @@ GameObject:
   - component: {fileID: 4500871554234756057}
   - component: {fileID: 5007890403284778481}
   - component: {fileID: 9037754644516597216}
+  - component: {fileID: 1875132725480368731}
   m_Layer: 0
   m_Name: JustinItem
   m_TagString: Item
@@ -4910,6 +4911,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.41, y: 0.4, z: 0.67}
   m_Center: {x: 0, y: 0, z: 0.165}
+--- !u!95 &1875132725480368731
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510127091089496000}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6ec5270edbb5dfc498aa324f48007a30, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5360848576971945704
 GameObject:
   m_ObjectHideFlags: 0
@@ -4956,6 +4978,8 @@ GameObject:
   - component: {fileID: 6814208823181618919}
   - component: {fileID: 3315135990464508261}
   - component: {fileID: 5296430648379903094}
+  - component: {fileID: 7286129720201166477}
+  - component: {fileID: 11062885552738575}
   m_Layer: 0
   m_Name: Flamer
   m_TagString: Item
@@ -5054,9 +5078,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &6814208823181618919
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5104,3 +5128,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireGun: {fileID: 3315135990464508261}
+--- !u!95 &7286129720201166477
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6114228155539877305}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 83f936963b53a7947b80e0f7dd64c4cb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &11062885552738575
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6114228155539877305}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 7caacb6bc9b267a459cdc4dee85d540e, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
