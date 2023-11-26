@@ -512,6 +512,7 @@ GameObject:
   - component: {fileID: 8300153508165679946}
   - component: {fileID: 9168540187420898260}
   - component: {fileID: 1969604662215805524}
+  - component: {fileID: 3014805275228762553}
   m_Layer: 0
   m_Name: CalebRItem - Firework Jetpack
   m_TagString: Item
@@ -608,6 +609,33 @@ MonoBehaviour:
   downwardForceAmount: 25
   rocketParticlePrefab: {fileID: -7618818650537092149, guid: 81546c096b3cf134ca0c3b1d890de2a6, type: 3}
   rocketParticleSpawn: {fileID: 2556436555530522097}
+  idleAnimation: {fileID: 7400000, guid: 51179d097dd6e3d41948b7bcd258e912, type: 2}
+  launchAnimation: {fileID: 7400000, guid: a88e730391012a843b586bde29de90ff, type: 2}
+  slamAnimation: {fileID: 7400000, guid: 52076344c03f5344c98b03a192aea55d, type: 2}
+  startFloatingAnimation: {fileID: 7400000, guid: d9703e0ce067e51429725b3447442cda, type: 2}
+  floatAnimation: {fileID: 7400000, guid: a5f7046004e10fa4c89249531eea1157, type: 2}
+  stopFloatingAnimation: {fileID: 7400000, guid: ae55a2dd095780943a108b74bfbc50df, type: 2}
+--- !u!95 &3014805275228762553
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3819371022819922414}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 50fa769741c95e74ebfe9fa7992ebde1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4660122265875073817
 GameObject:
   m_ObjectHideFlags: 0
