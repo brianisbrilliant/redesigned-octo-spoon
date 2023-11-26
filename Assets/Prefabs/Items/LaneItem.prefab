@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4549777796370791789}
   - component: {fileID: 3373981999745494949}
   - component: {fileID: 2538231308486445927}
+  - component: {fileID: 794780054820345801}
   m_Layer: 0
   m_Name: LaneItem
   m_TagString: Item
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 5842337703622484031}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.94530916, z: -0, w: 0.3261759}
-  m_LocalPosition: {x: 2.85, y: 1.317, z: 2.775}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -98,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 339d8b5b3c2e35a458d15d9f22745954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 794780054820345801}
   aud: {fileID: 4549777796370791789}
   audioClip: {fileID: 8300000, guid: 06f6f2115df60ae47831f4b2491700af, type: 3}
   audioClip1: {fileID: 8300000, guid: c916ea3c36136404aa45bfd13ba1c2a5, type: 3}
@@ -312,6 +314,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pools: []
+--- !u!95 &794780054820345801
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5842337703622484031}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 81f88ee319c48a64e877cbbdf542282e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &2237363964627316079
 PrefabInstance:
   m_ObjectHideFlags: 0

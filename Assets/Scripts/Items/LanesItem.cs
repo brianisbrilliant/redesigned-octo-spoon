@@ -5,6 +5,7 @@ using UnityEngine;
 public class LanesItem : MonoBehaviour, IItem
 {
      private Rigidbody rb;
+     public Animator anim;
 public AudioSource aud;
 public AudioClip audioClip;
 public AudioClip audioClip1;
@@ -23,6 +24,7 @@ public AudioSource aud1;
          rb = this.GetComponent<Rigidbody>();
              aud = GetComponent<AudioSource>();
               aud1 = GetComponent<AudioSource>();
+              anim = gameObject.GetComponent<Animator>();
     }
 
        public void Pickup(Transform hand) {
@@ -34,6 +36,8 @@ public AudioSource aud1;
         this.transform.localPosition = Vector3.zero;
         this.transform.localRotation = Quaternion.identity;
         // turn off collision so it doesn't push the player off the map
+
+        anim.SetTrigger("PickUp");
     }
 
     public void Drop() {
@@ -44,7 +48,8 @@ public AudioSource aud1;
         rb.AddRelativeForce(Vector3.forward * 10, ForceMode.Impulse);
         // set this parent to null
         this.transform.SetParent(null);
-        
+
+        anim.SetTrigger("OnDrop");        
     }
     public void PrimaryAction()
     {
@@ -54,6 +59,7 @@ public AudioSource aud1;
         projectile.transform.rotation = bulletFSpawnPoint.rotation;
         projectile.GetComponent<Rigidbody>().velocity = bulletFSpawnPoint.forward * bulletSpeed;
         aud.PlayOneShot(audioClip);
+        anim.SetTrigger("Function2");
     }
 
     public void SecondaryAction()
@@ -64,5 +70,14 @@ public AudioSource aud1;
         projectile.transform.rotation = bulletBSpawnPoint.rotation;
         projectile.GetComponent<Rigidbody>().velocity = bulletBSpawnPoint.forward * bulletSpeed;
         aud1.PlayOneShot(audioClip1);
+        anim.SetTrigger("Function2");
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            anim.SetTrigger("Function1");
+        }
     }
 }
