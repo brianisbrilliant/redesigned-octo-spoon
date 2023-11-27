@@ -16,6 +16,11 @@ public void OnCollisionEnter(Collision collision)
     GameObject Fartbullet = Instantiate (prefab) as GameObject;
     Fartbullet.transform.position = transform.position;
     Destroy (Fartbullet, 8);
-    Destroy (gameObject);
+   // Destroy (gameObject);
+   ReturnToPool();
+}
+private void ReturnToPool()
+{
+    LanesObjectPooler.Instance.ReturnToPool(gameObject);
 }
 }
