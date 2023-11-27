@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Cube
   - Item
+  - RespawnCube
   layers:
   - Default
   - TransparentFX
