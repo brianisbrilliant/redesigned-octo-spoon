@@ -489,6 +489,70 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 549382affad5d5c4a98a984bff77068e, type: 3}
+<<<<<<< Updated upstream
+=======
+--- !u!1001 &286725790
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7586169189695669572, guid: 86abf75d5fe7f1843b816a8728ce8cf6, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586169189695669572, guid: 86abf75d5fe7f1843b816a8728ce8cf6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586169189695669572, guid: 86abf75d5fe7f1843b816a8728ce8cf6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586169189695669572, guid: 86abf75d5fe7f1843b816a8728ce8cf6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586169189695669572, guid: 86abf75d5fe7f1843b816a8728ce8cf6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.9707064
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586169189695669572, guid: 86abf75d5fe7f1843b816a8728ce8cf6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.07676921
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586169189695669572, guid: 86abf75d5fe7f1843b816a8728ce8cf6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.18633148
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586169189695669572, guid: 86abf75d5fe7f1843b816a8728ce8cf6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.13082887
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586169189695669572, guid: 86abf75d5fe7f1843b816a8728ce8cf6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 11.408
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586169189695669572, guid: 86abf75d5fe7f1843b816a8728ce8cf6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -339.602
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586169189695669572, guid: 86abf75d5fe7f1843b816a8728ce8cf6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -13.293
+      objectReference: {fileID: 0}
+    - target: {fileID: 7743929372257156865, guid: 86abf75d5fe7f1843b816a8728ce8cf6, type: 3}
+      propertyPath: m_Name
+      value: RileyItem#2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 86abf75d5fe7f1843b816a8728ce8cf6, type: 3}
+>>>>>>> Stashed changes
 --- !u!1 &290444693
 GameObject:
   m_ObjectHideFlags: 0
