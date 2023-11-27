@@ -17,7 +17,10 @@ public void OnCollisionEnter(Collision collision)
     GameObject Burpbullet = Instantiate (prefab) as GameObject;
     Burpbullet.transform.position = transform.position;
     Destroy (Burpbullet, 2);
-    Destroy (gameObject);
-   // animator.Play("LanesBB");
+    ReturnToPool();
+}
+private void ReturnToPool()
+{
+    LanesObjectPooler.Instance.ReturnToPool(gameObject);
 }
 }

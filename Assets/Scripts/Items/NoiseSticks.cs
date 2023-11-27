@@ -8,6 +8,11 @@ public class NoiseSticks : MonoBehaviour, IItem {
     private AudioSource audioSound;
     private bool pitch = false;
 
+    private Queue<GameObject> pool = new Queue<GameObject>();
+    [SerializeField] private Transform particleSpawnPoint;
+    [SerializeField] private float particleTime;
+    [SerializeField] private GameObject particleObject;
+
     void Start() {
         rb = this.GetComponent<Rigidbody>();
         anim = this.GetComponent<Animator>();
@@ -48,7 +53,7 @@ public class NoiseSticks : MonoBehaviour, IItem {
         // change pitch of the sound from 1 to 0.5
         // this will flip the setting
         pitch = !pitch;
-        
+        anim.SetTrigger("SecondTrigger");
         // this will change the pitch of the sound
         if(pitch) {
             audioSound.pitch = 1;
@@ -60,5 +65,40 @@ public class NoiseSticks : MonoBehaviour, IItem {
 
     public void PlaySound() {
         audioSound.Play();
+        SpawnParticles();
+    }
+
+    public void SpawnParticles() {
+        GameObject particleToSpawn;
+        if(pool.Count > 0) {
+            particleToSpawn = pool.Dequeue();
+            particleToSpawn.gameObject.SetActive(true);
+
+            Debug.Log("Spawn Particles pool.Count > 0");
+        } else {
+            particleToSpawn = Instantiate(particleObject);
+            //particleToSpawn.gameObject.GetComponent<ParticleSystem>();
+            Debug.Log("Object was instantiated");
+        }
+            particleToSpawn.transform.SetParent(this.transform);
+            particleToSpawn.transform.SetPositionAndRotation(particleSpawnPoint.position, Quaternion.identity);
+            PlayParticle(particleToSpawn);
+    }
+
+    private void PlayParticle(GameObject particleToPlay) {
+        StartCoroutine(ParticleVisibleTimer(particleToPlay));
+        Debug.Log("Should play particles");
+    }
+
+    private IEnumerator ParticleVisibleTimer(GameObject particleVisible) {
+        yield return new WaitForSeconds(particleTime);
+        DisableParticle(particleVisible);
+    }
+
+    private void DisableParticle(GameObject particleToDisable) {
+        if(particleToDisable.activeSelf == false) return;
+
+        pool.Enqueue(particleToDisable);
+        particleToDisable.SetActive(false);
     }
 }
