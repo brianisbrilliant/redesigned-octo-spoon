@@ -95,7 +95,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10fd5224a69e47841af401a8260f4384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  markerPrefab: {fileID: 0}
 --- !u!1 &8517094387017196503
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,6 +107,7 @@ GameObject:
   - component: {fileID: 4816840989174260812}
   - component: {fileID: 2620768318021839071}
   - component: {fileID: 6794844208418507471}
+  - component: {fileID: 707138433167837184}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -203,3 +203,24 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: -0.0000004172325, y: 0, z: -0.00000020861626}
+--- !u!95 &707138433167837184
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8517094387017196503}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 479b22e9908dbf449b16d7d427d0058d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
