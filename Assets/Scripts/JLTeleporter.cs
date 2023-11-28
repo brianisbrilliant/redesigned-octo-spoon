@@ -12,10 +12,11 @@ public class JLTeleporter : MonoBehaviour, IItem
     private Transform playerTransform;
     private Vector3 teleportDestination;
     private GameObject teleportMarker;
-    public GameObject markerPrefab;
     private bool isMarkerSet = false; //Needed to add this to stop the prefab from spawning on Start
     private Camera mainCamera; //added reference to camera for raycast
     private float teleportHeightOffset = 1.0f; //added a height offset because I was falling through the floor on teleport
+
+    private Animator animator; //added for animation assignment
 
     void Start()
     {
@@ -23,6 +24,8 @@ public class JLTeleporter : MonoBehaviour, IItem
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         teleportDestination = transform.position;
         mainCamera = Camera.main; //gets camera for raycast behavior
+
+        animator = GetComponentInChildren<Animator>(); //added for animation assignment
     }
 
     public void Pickup(Transform hand)
@@ -56,6 +59,8 @@ public class JLTeleporter : MonoBehaviour, IItem
         Vector3 adjustedDestination = new Vector3 (teleportDestination.x, teleportDestination.y + teleportHeightOffset, teleportDestination.z);
         
         playerTransform.position = adjustedDestination; //changed teleportDestination to adjustedDestination
+
+        animator.SetTrigger("Teleport"); //added for animation assignment
     }
 
     public void SecondaryAction()
@@ -66,6 +71,8 @@ public class JLTeleporter : MonoBehaviour, IItem
         {
             SetTeleportDestination(hit.point);
         }
+
+        animator.SetTrigger("SetMarker"); //added for animation assignment
     }
 
     //polish
@@ -75,8 +82,17 @@ public class JLTeleporter : MonoBehaviour, IItem
 
         if (!isMarkerSet)
         {
-            teleportMarker = Instantiate(markerPrefab, newDestination, Quaternion.identity);
-            isMarkerSet = true;
+            //Changed logic to find the prefab instead of drag and drop
+            GameObject jarvisBooth = GameObject.Find("Jarvis Booth");
+            if (jarvisBooth != null)
+            {
+                teleportMarker = Instantiate(jarvisBooth, newDestination, Quaternion.identity);
+                isMarkerSet = true;
+            }
+            else
+            {
+                Debug.LogError("Jarvis Booth object not found in the scene.");
+            }
         }
         else if (teleportMarker != null)
         {
