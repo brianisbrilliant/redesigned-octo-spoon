@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "redesigned-octo-spoon-caleb.sln"
+    "dotnet.defaultSolution": "redesigned-octo-spoon.sln"
 }

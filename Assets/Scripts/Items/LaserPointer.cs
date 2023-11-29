@@ -6,7 +6,7 @@ using UnityEngine.Rendering;
 
 public class LaserPointer : MonoBehaviour, IItem
 {
-  public GameObject laser;
+    public GameObject laser;
     private Rigidbody rb;
     private void Start()
     {
