@@ -52,6 +52,7 @@ public class BoomBox : MonoBehaviour, IItem
         Debug.Log("Performing Primary Action");
         // Trigger the burst effect when PrimaryAction is called
         StartBurst();
+
     }
 
     public void SecondaryAction()
