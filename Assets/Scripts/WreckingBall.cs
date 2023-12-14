@@ -1,4 +1,3 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -39,7 +38,7 @@ public class WreckingBall : MonoBehaviour
     // remove this when attaching to player ship.
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && readyToLaunch)
+        if (Input.GetKeyDown(KeyCode.Space) && readyToLaunch)
         {
             Launch();
         }
@@ -60,6 +59,8 @@ public class WreckingBall : MonoBehaviour
         {
             launchAudioSource.PlayOneShot(launchAudioClip);
         }
+
+        Debug.Log("Launch method called");
 
         StartCoroutine(Return());
         rb.isKinematic = false;
