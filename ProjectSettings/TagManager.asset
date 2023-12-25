@@ -8,6 +8,7 @@ TagManager:
   - Item
   - ShultsCube
   - Rain
+  - Turret
   layers:
   - Default
   - TransparentFX
